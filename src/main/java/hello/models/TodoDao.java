@@ -14,6 +14,8 @@ public interface TodoDao extends CrudRepository<Todo, Long> {
 	 */
 	public Todo findByLabel(String label);
 
+	// Object findById(Long id);
+
 	public List<Todo> findAll();
 
 }

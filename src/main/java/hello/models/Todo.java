@@ -14,7 +14,7 @@ public class Todo {
 
 	private String label;
 
-	protected Todo() {
+	public Todo() {
 	}
 
 	public Todo(String label) {

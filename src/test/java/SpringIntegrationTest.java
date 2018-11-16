@@ -21,7 +21,7 @@ import main.java.hello.Application;
 public class SpringIntegrationTest {
 	static ResponseResults latestResponse = null;
 
-	@Autowired
+	@Autowired(required = false)
 	protected RestTemplate restTemplate;
 
 	void executeGet(String url) throws IOException {

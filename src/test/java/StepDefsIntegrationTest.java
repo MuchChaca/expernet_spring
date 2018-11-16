@@ -24,10 +24,8 @@ public class StepDefsIntegrationTest extends SpringIntegrationTest {
 	@Then("^the client receives status code of (\\d+)$")
 	public void the_client_receives_status_code_of(int statusCode) throws Throwable {
 		try {
-			System.out.println("-----------------------------------------"); // DEBUG
 			final HttpStatus currentStatusCode = latestResponse.getTheResponse().getStatusCode();
 			System.out.println(currentStatusCode.toString()); // DEBUG
-			System.out.println("-----------------------------------------"); // DEBUG
 			assertThat("status code is incorrect : " + latestResponse.getBody(), currentStatusCode.value(),
 					is(statusCode));
 		} catch (Exception ex) {

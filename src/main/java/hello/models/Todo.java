@@ -14,11 +14,18 @@ public class Todo {
 
 	private String label;
 
+	private boolean isDone;
+
 	public Todo() {
 	}
 
 	public Todo(String label) {
 		this.label = label;
+	}
+
+	public Todo(String label, boolean isDone) {
+		this.label = label;
+		this.isDone = isDone;
 	}
 
 	@Override
@@ -42,5 +49,9 @@ public class Todo {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+	public boolean getIsDone() { return this.isDone; }
+
+	public void setIsDone(boolean isDone) { this.isDone = isDone; }
 
 }

@@ -8,6 +8,7 @@ notifications:
 env:
   global:
   - COMMIT=${TRAVIS_COMMIT::7}
+  - CODECOV_TOKEN="bad74845-3ce4-475c-8f39-f1265ffa601e"
  
 
 script:

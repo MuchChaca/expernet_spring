@@ -2,14 +2,18 @@ sudo: required
 language: java
 jdk: oraclejdk8
  
+notifications:
+  email: false
+
 env:
   global:
   - COMMIT=${TRAVIS_COMMIT::7}
+  - CODECOV_TOKEN="bad74845-3ce4-475c-8f39-f1265ffa601e"
  
 
- 
 script:
-- ./mvnw clean install -B
+  - ./mvnw clean install -B
+  - "mvn cobertura:cobertura"
 
-notifications:
-  email: false
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
